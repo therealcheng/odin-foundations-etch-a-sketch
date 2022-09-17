@@ -11,5 +11,5 @@ function makeGrid(rows, cols) {
     gridContainer.appendChild(emptyCell).className = 'grid-item';
   }
 }
-
-makeGrid(7, 7);
+// makeGrid (rows, columns)
+makeGrid(16, 16);

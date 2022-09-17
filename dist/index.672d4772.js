@@ -10,6 +10,7 @@ function makeGrid(rows, cols) {
         gridContainer.appendChild(emptyCell).className = "grid-item";
     }
 }
-makeGrid(7, 7);
+// makeGrid (rows, columns)
+makeGrid(16, 16);
 
 //# sourceMappingURL=index.672d4772.js.map
