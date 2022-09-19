@@ -1,6 +1,6 @@
 'use strict';
 const gridContainer = document.querySelector('.grid-container');
-const check = document.querySelector('.check');
+const newGrid = document.getElementById('grid-new');
 
 function makeGrid(rows, cols) {
   gridContainer.style.setProperty('--grid-rows', rows);
