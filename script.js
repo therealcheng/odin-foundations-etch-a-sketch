@@ -1,5 +1,6 @@
 'use strict';
 const gridContainer = document.querySelector('.grid-container');
+const check = document.querySelector('.check');
 
 function makeGrid(rows, cols) {
   gridContainer.style.setProperty('--grid-rows', rows);
@@ -13,3 +14,13 @@ function makeGrid(rows, cols) {
 }
 // makeGrid (rows, columns)
 makeGrid(16, 16);
+
+const gridItem = document.querySelectorAll('.grid-item');
+
+gridItem.forEach((grid) => {
+  grid.addEventListener('click', changeColor);
+});
+
+function changeColor() {
+  console.log('change color');
+}
