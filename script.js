@@ -18,9 +18,8 @@ makeGrid(16, 16);
 const gridItem = document.querySelectorAll('.grid-item');
 
 gridItem.forEach((grid) => {
-  grid.addEventListener('click', changeColor);
+  grid.addEventListener('mouseover', function changeColor(e) {
+    e.preventDefault;
+    grid.style.backgroundColor = 'red';
+  });
 });
-
-function changeColor() {
-  console.log('change color');
-}
