@@ -1,6 +1,7 @@
 'use strict';
 const gridContainer = document.querySelector('.grid-container');
 const newGrid = document.getElementById('grid-new');
+const gridItem = document.querySelectorAll('.grid-item');
 
 function makeGrid(rows, cols) {
   gridContainer.style.setProperty('--grid-rows', rows);
@@ -13,13 +14,22 @@ function makeGrid(rows, cols) {
   }
 }
 // makeGrid (rows, columns)
-makeGrid(16, 16);
-
-const gridItem = document.querySelectorAll('.grid-item');
+makeGrid(8, 8);
 
 gridItem.forEach((grid) => {
   grid.addEventListener('mouseover', function changeColor(e) {
     e.preventDefault;
     grid.style.backgroundColor = 'red';
   });
+});
+
+newGrid.addEventListener('click', function (e) {
+  const squareN = prompt(
+    'Please write the number of squares per side for the new grid.'
+  );
+  console.log(squareN);
+  // clear current makeGrid
+  gridContainer.innerHTML = '';
+  // make new grid
+  makeGrid(squareN, squareN);
 });
