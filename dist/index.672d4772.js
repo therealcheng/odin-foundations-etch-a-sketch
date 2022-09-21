@@ -1,6 +1,9 @@
 "use strict";
 const gridContainer = document.querySelector(".grid-container");
 const check = document.querySelector(".check");
+const gridItem = document.querySelectorAll(".grid-item");
+const newGrid = document.getElementById("grid-new");
+console.log(gridContainer);
 function makeGrid(rows, cols) {
     gridContainer.style.setProperty("--grid-rows", rows);
     gridContainer.style.setProperty("--grid-cols", cols);
@@ -11,12 +14,25 @@ function makeGrid(rows, cols) {
         gridContainer.appendChild(emptyCell).className = "grid-item";
     }
 }
-// makeGrid (rows, columns)
+function changeColor() {
+    gridContainer.childNodes.forEach((grid)=>{
+        grid.addEventListener("mouseover", function changeColor(e) {
+            e.preventDefault;
+            grid.style.backgroundColor = "red";
+        });
+    });
+}
 makeGrid(16, 16);
-const gridElement = document.querySelector(".grid-item");
-console.log(gridElement);
-check.addEventListener("click", function() {
-    console.log("check");
+changeColor();
+console.log(gridContainer);
+newGrid.addEventListener("click", function(e) {
+    const squareN = prompt("Please write the number of squares per side for the new grid.");
+    console.log(squareN);
+    // clear current makeGrid
+    gridContainer.innerHTML = "";
+    // make new grid
+    makeGrid(squareN, squareN);
+    changeColor();
 });
 
 //# sourceMappingURL=index.672d4772.js.map
