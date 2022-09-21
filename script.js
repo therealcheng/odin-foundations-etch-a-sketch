@@ -40,3 +40,10 @@ newGrid.addEventListener('click', function (e) {
   makeGrid(squareN, squareN);
   changeColor();
 });
+
+const abdal = 'Abdal is cool';
+console.log(abdal);
+let cheng = 'my name is cheng';
+console.log(cheng);
+cheng = 'cheng is not cool';
+console.log(cheng);
