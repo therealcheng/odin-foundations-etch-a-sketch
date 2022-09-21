@@ -14,7 +14,8 @@ function makeGrid(rows, cols) {
   }
 }
 // makeGrid (rows, columns)
-makeGrid(8, 8);
+makeGrid(12, 12);
+console.log(gridItem);
 
 gridItem.forEach((grid) => {
   grid.addEventListener('mouseover', function changeColor(e) {
@@ -23,13 +24,13 @@ gridItem.forEach((grid) => {
   });
 });
 
-newGrid.addEventListener('click', function (e) {
-  const squareN = prompt(
-    'Please write the number of squares per side for the new grid.'
-  );
-  console.log(squareN);
-  // clear current makeGrid
-  gridContainer.innerHTML = '';
-  // make new grid
-  makeGrid(squareN, squareN);
-});
+// newGrid.addEventListener('click', function (e) {
+//   const squareN = prompt(
+//     'Please write the number of squares per side for the new grid.'
+//   );
+//   console.log(squareN);
+//   // clear current makeGrid
+//   gridItem.innerHTML = '';
+//   // make new grid
+//   makeGrid(squareN, squareN);
+// });
