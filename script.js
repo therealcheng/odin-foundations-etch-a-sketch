@@ -15,22 +15,3 @@ function makeGrid(rows, cols) {
 }
 // makeGrid (rows, columns)
 makeGrid(12, 12);
-console.log(gridItem);
-
-gridItem.forEach((grid) => {
-  grid.addEventListener('mouseover', function changeColor(e) {
-    e.preventDefault;
-    grid.style.backgroundColor = 'red';
-  });
-});
-
-// newGrid.addEventListener('click', function (e) {
-//   const squareN = prompt(
-//     'Please write the number of squares per side for the new grid.'
-//   );
-//   console.log(squareN);
-//   // clear current makeGrid
-//   gridItem.innerHTML = '';
-//   // make new grid
-//   makeGrid(squareN, squareN);
-// });
